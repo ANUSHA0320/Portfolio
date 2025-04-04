@@ -1,213 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Data</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Gradient animation for background */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        /* Slide-in animation for table */
-        @keyframes slideIn {
-            0% { transform: translateY(50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
+  <style>
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        /* Fade-in and scaling effect for address */
-        @keyframes fadeInScale {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
+    @keyframes slideIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
 
-        /* Main container with animated background */
-        .mj {
-            background: linear-gradient(45deg, #ff4e50, #f9d423, #1e90ff);
-            background-size: 300% 300%;
-            animation: gradientAnimation 10s ease infinite;
-            color: whitesmoke;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            position: relative;
-            border-radius: 15px;
-        }
+    @keyframes fadeInScale {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
 
-        /* Sharp and attractive gradient text */
-        .mj h1 {
-            margin: 0;
-            text-align: left;
-            font-size: 48px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 
-                1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle shadow for clarity */
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: whitesmoke;
+    }
 
-        .mj-content {
-            width: 75%;
-        }
+    .Data {
+      padding: 10px;
+    }
 
-        .mj img {
-            border-radius: 20px;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
+    .mj {
+      background: linear-gradient(45deg, #ff4e50, #f9d423, #1e90ff);
+      background-size: 300% 300%;
+      animation: gradientAnimation 10s ease infinite;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
-        /* Address section with larger text and shadow */
-        .aj {
-            background-color: darkslategrey;
-            color: whitesmoke;
-            padding: 15px;
-            margin-top: 10px;
-            border-radius: 10px;
-            animation: fadeInScale 2s ease-in-out forwards;
-            text-align: center;
-        }
+    .mj-content {
+      flex: 1 1 60%;
+    }
 
-        .aj h4 {
-            font-size: 28px;
-            margin: 10px 0;
-            text-shadow: 
-                2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle, clean shadow */
-            color: #ffeb3b; /* Bright yellow */
-        }
+    .mj h1 {
+      margin: 0 0 10px 0;
+      font-size: 36px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    }
 
-        .aj small {
-            font-size: 20px;
-            text-shadow: 
-                1px 1px 2px rgba(0, 0, 0, 0.8),
-                0 0 5px rgba(255, 255, 255, 0.3);
-        }
+    .mj img {
+      border-radius: 15px;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin-top: 15px;
+    }
 
-        /* Table styling and animation */
-        table {
-            color: whitesmoke;
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-            animation: slideIn 2s ease-in-out forwards;
-        }
+    .aj {
+      background-color: darkslategrey;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+      text-align: center;
+      animation: fadeInScale 2s ease-in-out forwards;
+    }
 
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #fff;
-        }
+    .aj h4 {
+      font-size: 24px;
+      color: #ffeb3b;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
 
-        th {
-            background-color: rgba(255, 255, 255, 0.2);
-            font-weight: bold;
-        }
+    .aj small {
+      font-size: 16px;
+      display: block;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
 
-        td {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Email link styling */
-        .email-link {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      animation: slideIn 2s ease-in-out forwards;
+    }
 
-        .email-link:hover {
-            color: #ffeb3b; /* Highlight on hover */
-        }
-        
-        /* LinkedIn icon styling */
-        .linkedin-icon {
-            color: #0e76a8; /* LinkedIn blue */
-            margin-left: 5px;
-            font-size: 1.5em; /* Adjust size as needed */
-            vertical-align: middle; /* Align with text */
-        }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #fff;
+    }
 
-        /* LinkedIn URL styling */
-        .linkedin-url {
-            color: whitesmoke; /* Change color as needed */
-            margin-left: 10px;
-            font-size: 1em; /* Adjust font size */
-            text-decoration: underline; /* Underline the URL */
-        }
-    </style>
+    th {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    td {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .email-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .email-link:hover {
+      color: #ffeb3b;
+    }
+
+    .linkedin-icon {
+      color: #0e76a8;
+      margin-left: 5px;
+      font-size: 1.5em;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      .mj {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mj-content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .mj h1 {
+        font-size: 28px;
+      }
+
+      .mj img {
+        width: 150px;
+        height: 150px;
+        position: static;
+      }
+
+      table th, table td {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .aj h4 {
+        font-size: 20px;
+      }
+
+      .aj small {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mj h1 {
+        font-size: 24px;
+      }
+
+      .mj img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="Data">
-        <!-- Main Profile Section -->
-        <div class="mj">
-            <div class="mj-content">
-                <h1>ANUSHA M</h1>
-                <big><b>Father Name:</b> Mallikarjun M S</big><br><br>
-                <big><b>Mother Name:</b> Kalavathi </big><br><br>
-                <big>LinkedIn<a href="https://www.linkedin.com/in/anusha-m-05b18026a/" title="LinkedIn Profile" target="_blank">
-                        <i class="fab fa-linkedin linkedin-icon"></i>https://www.linkedin.com/in/anusha-m-05b18026a/</a><br><br>
-                    Email<a class="email-link" href="mailto:anusham660@gmail.com"><i class="fas fa-envelope"></i>  
-                        anusham660@gmail.com</a>
-                    </a><br><br>Call
-                    <a  href="tel:9019519614">
-                        &#128222;</i>9019519614 </a>
-                    </big><br><br>
-                <big>&#128197;: 20-08-2003</big><br><br>
-               
-            
+  <div class="Data">
+    <div class="mj">
+      <div class="mj-content">
+        <h1>ANUSHA M</h1>
+        <big><b>Father Name:</b> Mallikarjun M S</big><br><br>
+        <big><b>Mother Name:</b> Kalavathi</big><br><br>
+        <big>LinkedIn 
+          <a href="https://www.linkedin.com/in/anusha-m-05b18026a/" target="_blank">
+            <i class="fab fa-linkedin linkedin-icon"></i> /anusha-m-05b18026a
+          </a>
+        </big><br><br>
+        <big>Email 
+          <a class="email-link" href="mailto:anusham660@gmail.com">
+            <i class="fas fa-envelope"></i> anusham660@gmail.com
+          </a>
+        </big><br><br>
+        <big>Call 
+          <a href="tel:9019519614">&#128222; 9019519614</a>
+        </big><br><br>
+        <big>&#128197; DOB: 20-08-2003</big><br><br>
 
-                <h3>My Education</h3>
-                <table border="3">
-                    <tr>
-                        <th>Slno</th>
-                        <th>School/College Name</th>
-                        <th>Percentage/Cgpa</th>
-                        <th>Passout Year</th>
-                        <th>Location</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Governament Girls High School</td>
-                        <td>93.92 %</td>
-                        <td>2019</td>
-                        <td>Tiptur</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Governament P U College</td>
-                        <td>96.33 %</td>
-                        <td>2021</td>
-                        <td>Tiptur</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td> K R PETE Krishna Governament Engineering College</td>
-                        <td>8.76</td>
-                        <td>2025</td>
-                        <td>Krishnarajpete</td>
-                    </tr>
-                </table>
-            </div>
+        <h3>My Education</h3>
+        <table>
+          <tr>
+            <th>Sl No</th>
+            <th>School/College Name</th>
+            <th>Percentage/CGPA</th>
+            <th>Passout Year</th>
+            <th>Location</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Government Girls High School</td>
+            <td>93.92%</td>
+            <td>2019</td>
+            <td>Tiptur</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Government PU College</td>
+            <td>96.33%</td>
+            <td>2021</td>
+            <td>Tiptur</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>KR PET Krishna Government Engineering College</td>
+            <td>8.89</td>
+            <td>2025</td>
+            <td>Krishnarajpete</td>
+          </tr>
+        </table>
+      </div>
 
-            <img src="anu.jpg" alt="Profile Image"/>
-        </div>
-
-        <!-- Address Section with Larger Text and Animation -->
-        <div class="aj">
-            <h4>ADDRESS</h4>
-            <big>&#128205;</big><br>
-            <small><b>Anusha M </b></small><br>
-            <small><b>Madlehalli, Kuppalu Post,Tiptur Taluk </b></small><br>
-            <small><b>Tumkur District,Karnataka</b></small>
-        </div>
+      <img src="anu.jpg" alt="Profile Image" />
     </div>
-    
+
+    <div class="aj">
+      <h4>ADDRESS</h4>
+      <big>&#128205;</big><br>
+      <small><b>Anusha M</b></small>
+      <small><b>Madlehalli, Kuppalu Post, Tiptur Taluk</b></small>
+      <small><b>Tumkur District, Karnataka</b></small>
+    </div>
+  </div>
 </body>
 </html>
