@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        /* Full-page background with gradient and image */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGVkdWNhdGlvbnxlbnwwfHx8fDE2OTU2NjU3MjY&ixlib=rb-4.0.3&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(0.7);
+        }
+
+        /* Overlay for better contrast */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(187, 241, 234, 0.5);
+        }
+
+        /* Container for certificates */
+        .certificates-container {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* Individual certificate cards */
+        .certificate-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .certificate-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Certificate title styling */
+        h2, h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Certificate description styling */
+        p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* Link button */
+        a {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 16px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(175, 223, 224, 0.2);
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(150, 112, 112);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+    <div class="certificates-container">
+        <div class="certificate-card">
+            <h2>Hand Gesture Recognition System</h2>
+            <p>Recognizes human hand gestures using pre-trained models. Tools: Spyder</p>
+            <video width="100%" controls>
+                <source src="hand_gesture.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Online Marriage Registration System</h2>
+            <p>An online platform for storing information and generating marriage certificates. Tools: Visual Studio Code, PHP, MySQL</p>
+            <video width="100%" controls>
+                <source src="omrs.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Customer Churn Data Analysis</h2>
+            <p>Predicts customer churn based on key factors and helps make data-driven decisions. Tech Stack: Python, Streamlit, Pandas, Scikit-Learn, Matplotlib</p>
+            <a href="https://lnkd.in/gMxmT3Gn" target="_blank">View Project</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>ClauseWise Leguism</h2>
+            <p>Summarizes legal documents to simplify terms and conditions. Tech: Azure Speech SDK, spaCy NLP, T5 Transformer</p>
+            <a href="https://lnkd.in/gGt73HYu" target="_blank">View Project</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates</title>
+    <style>
+        /* Full-page background with gradient and image */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGVkdWNhdGlvbnxlbnwwfHx8fDE2OTU2NjU3MjY&ixlib=rb-4.0.3&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(0.7);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(187, 241, 234, 0.5);
+        }
+
+        .certificates-container {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .certificate-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .certificate-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 16px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(175, 223, 224, 0.2);
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(150, 112, 112);
+        }
+
+        @media (max-width: 480px) {
+            .certificate-card {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="certificates-container">
+        <div class="certificate-card">
+            <h2>PLC Internship Certificate</h2>
+            <a href="gttc.jpg" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Full Stack Development Internship Certificate</h2>
+            <a href="techcentrix.jpeg" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Certificate of Quiz</h2>
+            <a href="tcs.jpg" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Mechatronics Level-1 Certification</h2>
+            <a href="Mechatronics.png" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Angular 15 Certification</h2>
+            <a href="Angular.png" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Basic Relational Database Design (MySQL)</h2>
+            <a href="mysql.png" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h2>Power BI: Data Visualization</h2>
+            <a href="power.png" target="_blank">View Certificate</a>
+        </div>
+    </div>
+
+</body>
+</html>
