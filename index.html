@@ -155,15 +155,18 @@
         </h3>
     </div>
 
-    <script>
-        document.getElementById("downloadResume").addEventListener("click", function () {
-            const link = document.createElement("a");
-            link.href = "resume.pdf"; // Change to actual path
-            link.download = "Anusha_Resume.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-    </script>
+    <button id="downloadResume">Download Resume</button>
+
+<script>
+  document.getElementById("downloadResume").addEventListener("click", function () {
+    const link = document.createElement("a");
+    link.href = "resume.pdf"; // Ensure resume.pdf is in same folder as HTML
+    link.download = "Anusha_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+
 </body>
 </html>
