@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Data</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     @keyframes gradientAnimation {
       0% { background-position: 0% 50%; }
@@ -26,33 +25,33 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: whitesmoke;
+      background: #000;
     }
 
     .Data {
-      padding: 10px;
+      padding: 15px;
     }
 
     .mj {
       background: linear-gradient(45deg, #ff4e50, #f9d423, #1e90ff);
       background-size: 300% 300%;
       animation: gradientAnimation 10s ease infinite;
-      border-radius: 15px;
-      padding: 20px;
+      color: whitesmoke;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      align-items: flex-start;
+      padding: 20px;
+      position: relative;
+      border-radius: 15px;
+      flex-wrap: wrap;
     }
 
     .mj-content {
-      flex: 1 1 60%;
+      width: 70%;
     }
 
     .mj h1 {
-      margin: 0 0 10px 0;
-      font-size: 36px;
+      margin: 0;
+      font-size: 48px;
       font-weight: bold;
       background: linear-gradient(90deg, #ff7e5f, #feb47b);
       -webkit-background-clip: text;
@@ -61,51 +60,52 @@
     }
 
     .mj img {
-      border-radius: 15px;
-      width: 180px;
-      height: 180px;
+      border-radius: 20px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      margin-top: 15px;
+      margin-left: 20px;
     }
 
     .aj {
       background-color: darkslategrey;
+      color: whitesmoke;
       padding: 15px;
-      margin-top: 15px;
+      margin-top: 10px;
       border-radius: 10px;
-      text-align: center;
       animation: fadeInScale 2s ease-in-out forwards;
+      text-align: center;
     }
 
     .aj h4 {
-      font-size: 24px;
-      color: #ffeb3b;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin: 10px 0;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      color: #ffeb3b;
     }
 
     .aj small {
-      font-size: 16px;
-      display: block;
-      line-height: 1.6;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+      font-size: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 5px rgba(255, 255, 255, 0.3);
     }
 
     table {
-      width: 100%;
+      color: whitesmoke;
       border-collapse: collapse;
+      width: 100%;
       margin-top: 20px;
       animation: slideIn 2s ease-in-out forwards;
     }
 
     th, td {
-      padding: 10px;
+      padding: 12px;
       text-align: left;
       border: 1px solid #fff;
     }
 
     th {
       background-color: rgba(255, 255, 255, 0.2);
+      font-weight: bold;
     }
 
     td {
@@ -129,10 +129,18 @@
       vertical-align: middle;
     }
 
+    .linkedin-url {
+      color: whitesmoke;
+      margin-left: 10px;
+      font-size: 1em;
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .mj {
         flex-direction: column;
         align-items: center;
+        padding: 15px;
       }
 
       .mj-content {
@@ -140,38 +148,19 @@
         text-align: center;
       }
 
-      .mj h1 {
-        font-size: 28px;
-      }
-
       .mj img {
         width: 150px;
         height: 150px;
-        position: static;
+        margin-top: 20px;
+        margin-left: 0;
       }
 
-      table th, table td {
-        font-size: 14px;
-        padding: 8px;
-      }
-
-      .aj h4 {
-        font-size: 20px;
-      }
-
-      .aj small {
+      table {
         font-size: 14px;
       }
-    }
 
-    @media (max-width: 480px) {
       .mj h1 {
-        font-size: 24px;
-      }
-
-      .mj img {
-        width: 120px;
-        height: 120px;
+        font-size: 32px;
       }
     }
   </style>
@@ -182,63 +171,62 @@
       <div class="mj-content">
         <h1>ANUSHA M</h1>
         <big><b>Father Name:</b> Mallikarjun M S</big><br><br>
-        <big><b>Mother Name:</b> Kalavathi</big><br><br>
-        <big>LinkedIn 
-          <a href="https://www.linkedin.com/in/anusha-m-05b18026a/" target="_blank">
-            <i class="fab fa-linkedin linkedin-icon"></i> /anusha-m-05b18026a
-          </a>
-        </big><br><br>
-        <big>Email 
+        <big><b>Mother Name:</b> Kalavathi </big><br><br>
+        <big>
+          LinkedIn
+          <a href="https://www.linkedin.com/in/anusha-m-05b18026a/" title="LinkedIn Profile" target="_blank">
+            <i class="fab fa-linkedin linkedin-icon"></i> https://www.linkedin.com/in/anusha-m-05b18026a/
+          </a><br><br>
+          Email
           <a class="email-link" href="mailto:anusham660@gmail.com">
             <i class="fas fa-envelope"></i> anusham660@gmail.com
-          </a>
-        </big><br><br>
-        <big>Call 
+          </a><br><br>
+          Call
           <a href="tel:9019519614">&#128222; 9019519614</a>
         </big><br><br>
-        <big>&#128197; DOB: 20-08-2003</big><br><br>
+        <big>&#128197;: 20-08-2003</big><br><br>
 
         <h3>My Education</h3>
-        <table>
+        <table border="3">
           <tr>
-            <th>Sl No</th>
+            <th>Slno</th>
             <th>School/College Name</th>
-            <th>Percentage/CGPA</th>
+            <th>Percentage/Cgpa</th>
             <th>Passout Year</th>
             <th>Location</th>
           </tr>
           <tr>
             <td>1</td>
             <td>Government Girls High School</td>
-            <td>93.92%</td>
+            <td>93.92 %</td>
             <td>2019</td>
             <td>Tiptur</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Government PU College</td>
-            <td>96.33%</td>
+            <td>Government P U College</td>
+            <td>96.33 %</td>
             <td>2021</td>
             <td>Tiptur</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>KR PET Krishna Government Engineering College</td>
-            <td>8.89</td>
+            <td>K R PETE Krishna Government Engineering College</td>
+            <td>8.76</td>
             <td>2025</td>
             <td>Krishnarajpete</td>
           </tr>
         </table>
       </div>
 
-      <img src="anu.jpg" alt="Profile Image" />
+      <img src="anu.jpg" alt="Profile Image"/>
     </div>
 
     <div class="aj">
       <h4>ADDRESS</h4>
       <big>&#128205;</big><br>
-      <small><b>Anusha M</b></small>
-      <small><b>Madlehalli, Kuppalu Post, Tiptur Taluk</b></small>
+      <small><b>Anusha M </b></small><br>
+      <small><b>Madlehalli, Kuppalu Post, Tiptur Taluk</b></small><br>
       <small><b>Tumkur District, Karnataka</b></small>
     </div>
   </div>
