@@ -1,142 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to My Profile</title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Profile</title>
+    <style>
+        /* Full-page background with overlay effect */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      height: 100%;
-    }
+        /* Overlay effect to darken background for better visibility */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
 
-    body {
-      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: black;
-      color: white;
-    }
+        /* Centered content with responsiveness */
+        .manu {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.6);
+        }
 
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
+        /* Animated gradient background */
+        @keyframes ani {
+            0% { background-image: linear-gradient(to right, cyan, red, violet); }
+            100% { background-image: linear-gradient(to right, yellow, purple); }
+        }
 
-    .manu {
-      margin: 0 auto;
-      padding: 20px;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-      width: 90%;
-      max-width: 500px;
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      min-height: 100vh;
-      justify-content: center;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
+        /* Styling for the welcome text */
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
 
-    h1 {
-      font-size: 24px;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-      animation: slideLeft 12s linear infinite;
-      white-space: nowrap;
-      overflow: hidden;
-    }
+        /* Links */
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            display: inline-block;
+            margin: 8px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
 
-    @keyframes slideLeft {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
 
-    a {
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-    }
+        /* Resume button */
+        .resume-button {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    a:hover {
-      background-color: rgba(255, 255, 255, 0.7);
-      color: black;
-      transform: scale(1.05);
-    }
+        .resume-button:hover {
+            background-color: rgba(255, 0, 0, 1);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
 
-    button {
-      background-color: rgba(255, 0, 0, 0.8);
-      color: white;
-      font-size: 18px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        /* Responsive marquee */
+        marquee {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
 
-    button:hover {
-      background-color: red;
-      transform: scale(1.05);
-    }
+        /* Button styles */
+        button {
+            background-color: #aee6de;
+            color: rgb(58, 6, 35);
+            border: none;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 18px;
-      }
+        button:hover {
+            background-color: red;
+        }
 
-      a, button {
-        font-size: 16px;
-        padding: 8px 12px;
-      }
+        /* Responsive design adjustments */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
 
-      .manu {
-        padding: 15px;
-        gap: 15px;
-      }
-    }
-  </style>
+            a {
+                font-size: 16px;
+                padding: 6px 12px;
+            }
+
+            .resume-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="overlay"></div>
+    <!-- Overlay -->
+    <div class="overlay"></div>
 
-  <div class="manu">
-    <h1>WELCOME TO ANUSHA'S PORTFOLIO</h1>
+    <div class="manu">
+        <marquee direction="left" scrollamount="5">
+            <h1>WELCOME TO ANUSHA'S PORTFOLIO</h1>
+        </marquee>
+        
+        <h3><a href="my biodata.html">My Biodata</a></h3>
+        <h3><a href="certificate.html">Certificates</a></h3>
+        <h3><a href="projects.html">Projects</a></h3>
+        
+        <h3>
+            <button id="downloadResume">Download Resume</button>
+        </h3>
+    </div>
 
-    <a href="my biodata.html">My Biodata</a>
-    <a href="certificate.html">Certificates</a>
-    <a href="projects.html">Projects</a>
-
-    <button id="downloadResume">Download Resume</button>
-  </div>
-
-  <script>
-    document.getElementById("downloadResume").addEventListener("click", function () {
-      const link = document.createElement("a");
-      link.href = "resume.pdf"; // Replace with actual file path
-      link.download = "Anusha_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-  </script>
+    <script>
+        document.getElementById("downloadResume").addEventListener("click", function () {
+            const link = document.createElement("a");
+            link.href = "resume.pdf"; // Change to actual path
+            link.download = "Anusha_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
 </body>
 </html>
